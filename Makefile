@@ -1,6 +1,8 @@
 .PHONY: run clean
 
-run: app
+info: app
+	xcrun --sdk iphoneos clang --version
+	cat rust-toolchain
 	file app
 
 app: app.c Makefile target/aarch64-apple-ios/debug/libbitcoder.a
